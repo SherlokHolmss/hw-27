@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .dropdown-content-link {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown-content-link:hover {
+            color: orange;
+        }
+
+        .drop-button {
+            background-color: grey;
+            color: white;
+            padding: 16px;
+            border: none;
+            text-transform: uppercase;
+            height: 50px;
+            width: 500px;
+            transform: rotate(-90deg);
+            position: absolute;
+            top: 200px;
+            left: -235px;
+            
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: gray;
+            height: 500px;
+            min-width: 200px;
+            z-index: 1;
+            top: -22px;
+            left: -10px;
+        }
+        .dropdown-content-link::before{
+            content: "⭐";
+            width: 5px;
+            height: 5px;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px;
+            display: block;
+
+        }
+
+        /* .dropdown-content a:hover {
+            background-color: orange;
+        } */
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .drop-button {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown-list">
+        <div class="dropdown">
+            <button class="drop-button">Menu here</button>
+            <div class="dropdown-content">
+                <a href="#" class="dropdown-content-link">Home</a>
+                <a href="#" class="dropdown-content-link">Contacts</a>
+                <a href="#" class="dropdown-content-link">Our team</a>
+                <a href="#" class="dropdown-content-link">faq</a>
+                <a href="#" class="dropdown-content-link">about</a>
+                <a href="#" class="dropdown-content-link">news</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
